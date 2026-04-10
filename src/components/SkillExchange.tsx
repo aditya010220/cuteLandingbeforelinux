@@ -50,6 +50,10 @@ const categories = [
   },
 ]
 export function SkillExchange() {
+  const dashboardUrl =
+    (import.meta as ImportMeta & { env?: Record<string, string> }).env
+      ?.VITE_DASHBOARD_URL ?? ''
+
   return (
     <section className="py-24 bg-white px-6" id="exchange">
       <div className="max-w-7xl mx-auto">
@@ -174,7 +178,12 @@ export function SkillExchange() {
               </div>
 
               <div className="pt-4">
-                <button className="bg-charcoal text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-2 group-hover:bg-charcoal/90">
+                <button
+                  onClick={() => {
+                    if (dashboardUrl) window.location.href = dashboardUrl
+                  }}
+                  className="bg-charcoal text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-2 group-hover:bg-charcoal/90"
+                >
                   Start Exchanging{' '}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

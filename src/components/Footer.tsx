@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sprout, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
 export function Footer() {
+  const [email, setEmail] = useState('');
+
+  const handleJoin = () => {
+    if (!email.trim()) {
+      alert('Please fill the email');
+      return;
+    }
+    alert('Thanks for joining the Gurukul');
+  };
+
   return (
     <footer id="footer" className="bg-white pt-20 pb-10 px-6 rounded-t-[3rem] mt-10">
       <div className="max-w-7xl mx-auto">
@@ -20,18 +30,18 @@ export function Footer() {
           <div className="flex flex-col md:flex-row gap-4 justify-center max-w-md mx-auto relative z-10">
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="px-6 py-3 rounded-full border-2 border-white bg-white/80 focus:outline-none focus:border-lavender flex-1" />
+              className="px-6 py-3 rounded-full border-2 border-white bg-white/80 focus:outline-none focus:border-lavender flex-1"
+            />
 
             <motion.button
-              whileHover={{
-                scale: 1.05
-              }}
-              whileTap={{
-                scale: 0.95
-              }}
-              className="bg-charcoal text-white px-8 py-3 rounded-full font-bold hover:bg-charcoal/90">
-
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleJoin}
+              className="bg-charcoal text-white px-8 py-3 rounded-full font-bold hover:bg-charcoal/90"
+            >
               Join Now
             </motion.button>
           </div>
@@ -42,7 +52,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <img
-            src="/public/images/logo.png"
+            src="/images/logo.png"
             alt="GurukulX Logo"
             className="w-10 h-10 rounded-full group-hover:rotate-12 transition-transform duration-300"
           />
@@ -145,6 +155,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 }

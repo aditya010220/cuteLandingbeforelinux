@@ -17,7 +17,7 @@ const cards = [
     description: 'Real-time workshops with experts.',
     
     colSpan: 'md:col-span-7 md:row-span-2',
-    image: 'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif',
+    image: 'https://i.pinimg.com/originals/a8/09/94/a8099418b2137e113c808fff5df2dc2a.gif',
     titleSize: 'text-3xl',
     descSize: 'text-lg',
     large: true,
@@ -28,21 +28,21 @@ const cards = [
     description: 'Find your squad.',
     
     colSpan: 'md:col-span-5',
-    image: 'https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif',
+    image: 'https://i.pinimg.com/originals/22/09/5d/22095d8fd02905f537e78a507c7536e0.gif',
   },
   {
     title: 'Skill Matching',
     description: 'AI-powered connections.',
     
     colSpan: 'md:col-span-5',
-    image: 'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif',
+    image: 'https://i.pinimg.com/originals/6d/be/77/6dbe776fb412b0ade2600846d434c669.gif',
   },
   {
     title: 'Progress',
     description: 'Track your growth journey.',
     
     colSpan: 'md:col-span-4 md:row-span-2',
-    image: 'https://media.giphy.com/media/26u4nJPf0JtQPdStq/giphy.gif',
+    image: 'https://i.pinimg.com/originals/61/85/ec/6185ec579b55330f5ee568e27647d690.gif',
     titleSize: 'text-2xl',
     large: true,
     extra: 'chart',
@@ -50,9 +50,8 @@ const cards = [
   {
     title: 'Events',
     description: 'Community gatherings.',
-    
     colSpan: 'md:col-span-4',
-    image: 'https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif',
+    image: 'https://i.pinimg.com/originals/5a/f9/83/5af98367e525a094d8590cb4ef051825.gif',
     extra: 'days',
   },
   {
@@ -60,7 +59,7 @@ const cards = [
     description: 'Curated resources.',
     
     colSpan: 'md:col-span-4',
-    image: 'https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif',
+    image: 'https://i.pinimg.com/originals/3f/0e/45/3f0e45fb3743be3ffce7ef92d816d24b.gif',
   },
 ];
 
@@ -94,7 +93,7 @@ export function BentoGrid() {
             transition={{ delay: 0.1 }}
             className="text-lg text-charcoal/50 max-w-md mx-auto"
           >
-            Tools to help your garden grow.
+            Tools to help your journey grow.
           </motion.p>
         </div>
 
@@ -152,19 +151,26 @@ export function BentoGrid() {
                       </div>
                     )}
 
-                    {card.extra === 'attending' && (
+                         {card.extra === 'attending' && (
                       <div className="flex items-center gap-2 mb-3">
                         <div className="flex -space-x-2">
-                          {[...Array(3)].map((_, j) => (
-                            <div
+                          {[
+                            'https://i.pinimg.com/736x/52/30/06/523006d562bdd96f63081f7fd8f98f7a.jpg',
+                            'https://i.pinimg.com/1200x/f8/e3/29/f8e3293e7b037d4ae607c49468e65e46.jpg',
+                            'https://i.pinimg.com/1200x/7b/00/6b/7b006b81162b0fe19cfca38feb1c9bd0.jpg',
+                          ].map((src, j) => (
+                            <img
                               key={j}
-                              className="w-7 h-7 rounded-full bg-white/30 backdrop-blur-sm border-2 border-white/30"
+                              src={src}
+                              alt={`Avatar ${j + 1}`}
+                              className="w-7 h-7 rounded-full border-2 border-white/30 object-cover"
                             />
                           ))}
                         </div>
-                        <span className="text-xs text-white/60 ml-1">2.4k attending</span>
+                        <span className="text-xs text-white/60 ml-1">1.4k watching</span>
                       </div>
                     )}
+
 
                     <h3
                       className={`${card.titleSize || 'text-xl'} font-bold text-white mb-1`}

@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 const testimonials = [
   {
-    name: 'Aisha Sharma',
+    name: 'Astha Singh',
     role: 'UI Designer — Bengaluru',
     quote:
       'I connected with incredible mentors nearby and learned hands-on design techniques.',
-    image: 'https://randomuser.me/api/portraits/women/12.jpg',
+    image: 'https://i.pinimg.com/736x/f9/e3/cd/f9e3cd2175f691ed060f470c0b2d1c3c.jpg',
     color: 'bg-lavender',
   },
   {
@@ -15,7 +15,7 @@ const testimonials = [
     role: 'Frontend Developer — Delhi',
     quote:
       'Peer exchanges helped me land freelance work — real projects and real feedback.',
-    image: 'https://randomuser.me/api/portraits/men/45.jpg',
+    image: 'https://i.pinimg.com/736x/18/b8/68/18b8682e1b858bd07591876942083f03.jpg',
     color: 'bg-mint',
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     role: 'Digital Artist — Chennai',
     quote:
       'The community is so supportive — I grew my portfolio by collaborating with others.',
-    image: 'https://randomuser.me/api/portraits/women/15.jpg',
+    image: 'https://i.pinimg.com/736x/e2/5c/dd/e25cdd4d9af187f5bf085f3c3a443959.jpg',
     color: 'bg-peach',
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
     role: 'Product Manager — Mumbai',
     quote:
       'We exchange product insights and mock interviews — great place to practice.',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: 'https://i.pinimg.com/736x/17/94/30/179430bbe08926ede2e09a7771622a06.jpg',
     color: 'bg-soft-blue',
   },
   {
@@ -39,7 +39,7 @@ const testimonials = [
     role: 'Content Writer — Ahmedabad',
     quote:
       'I swapped copywriting lessons for basic React help — both of us advanced quickly.',
-    image: 'https://randomuser.me/api/portraits/women/24.jpg',
+    image: 'https://i.pinimg.com/736x/29/92/a4/2992a4fc23f8e4286f1299f9b75ae98e.jpg',
     color: 'bg-lavender',
   },
   {
@@ -47,7 +47,7 @@ const testimonials = [
     role: 'Music Producer — Hyderabad',
     quote:
       'Collaboration here led to a small EP release — the feedback loop is fantastic.',
-    image: 'https://randomuser.me/api/portraits/men/18.jpg',
+    image: 'https://i.pinimg.com/736x/2d/d5/7b/2dd57b967bea9060db4f669d16460b64.jpg',
     color: 'bg-mint',
   },
 ];
@@ -58,7 +58,7 @@ export function SocialProof() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-charcoal mb-4">
-            Voices from the Garden
+            Voices from the Gurukul
           </h2>
           <p className="text-xl text-charcoal/60">
             Hear from our growing community.

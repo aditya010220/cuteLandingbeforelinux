@@ -1,7 +1,10 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Link as LinkIcon } from 'lucide-react';
 export function Hero() {
+  const dashboardUrl =
+    (import.meta as ImportMeta & { env?: Record<string, string> }).env
+      ?.VITE_DASHBOARD_URL ?? '';
+
   return (
     <section className="min-h-screen pt-32 pb-20 px-6 bg-warm-white overflow-hidden relative flex items-center">
       {/* Background Decorative Blobs replaced with image assets (keeps same layout) */}
@@ -132,6 +135,9 @@ export function Hero() {
               whileTap={{
                 scale: 0.95
               }}
+              onClick={() => {
+                if (dashboardUrl) window.location.href = dashboardUrl;
+              }}
               className="bg-lavender px-8 py-4 rounded-full font-bold text-charcoal shadow-lg shadow-lavender/30 hover:shadow-xl hover:shadow-lavender/40 flex items-center gap-2 transition-all">
 
               Enter the Gurukul <ArrowRight className="w-5 h-5" />
@@ -208,7 +214,7 @@ export function Hero() {
             className="absolute top-0 left-0 w-[55%] h-[340px] rounded-[1.5rem] overflow-hidden shadow-xl bg-soft-blue group cursor-pointer z-10"
           >
             <img
-              src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?w=500&h=600&fit=crop&crop=faces"
+              src="https://i.pinimg.com/1200x/ef/d8/5b/efd85b15afa779e5d94aa7ea1b20dee6.jpg"
               alt="mentor teaching"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -224,7 +230,7 @@ export function Hero() {
             className="absolute top-[60px] right-0 w-[48%] h-[280px] rounded-[1.5rem] overflow-hidden shadow-xl bg-lavender group cursor-pointer z-10"
           >
             <img
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&h=600&fit=crop&crop=faces"
+              src="https://i.pinimg.com/736x/1d/1b/7b/1d1b7b3b77e031adcaa41f009afd10ea.jpg"
               alt="learner"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -240,7 +246,7 @@ export function Hero() {
             className="absolute bottom-0 left-[10%] w-[65%] h-[220px] rounded-[1.5rem] overflow-hidden shadow-xl bg-mint group cursor-pointer z-20"
           >
             <img
-              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=700&h=400&fit=crop&crop=faces"
+              src="https://i.pinimg.com/1200x/14/04/22/140422703343548dd59a5f1bc4e458f6.jpg"
               alt="community collaborating"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />

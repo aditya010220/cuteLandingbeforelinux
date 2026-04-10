@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const dashboardUrl =
+    (import.meta as ImportMeta & { env?: Record<string, string> }).env
+      ?.VITE_DASHBOARD_URL ?? '';
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setIsScrolled(latest > 50);
@@ -24,7 +27,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 group cursor-pointer">
           <img
-            src="/public/images/logo.png"
+            src="/images/logo.png"
             alt="GurukulX Logo"
             className="w-10 h-10 rounded-full group-hover:rotate-12 transition-transform duration-300"
           />
@@ -52,6 +55,9 @@ export function Navbar() {
           }}
           whileTap={{
             scale: 0.95
+          }}
+          onClick={() => {
+            if (dashboardUrl) window.location.href = dashboardUrl;
           }}
           className="bg-lavender text-charcoal px-6 py-2.5 rounded-full font-bold shadow-sm hover:shadow-md transition-all">
 
