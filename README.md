@@ -1,4 +1,4 @@
-# Magic Patterns - Vite Template
+# GuruKul Readme
 * Task 
 - only images and gif is left
 - make a twitter / linkedln / instagram page for skillshare
